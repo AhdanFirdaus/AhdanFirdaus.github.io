@@ -346,8 +346,9 @@ h2 span::after {
 form input {
     height: 45px;
     margin-bottom: 20px;
-    padding: 5px;
+    padding: 5px 15px;
     width: 100%;
+    font-family: 'Quicksand', sans-serif;
     font-size: 14px;
     outline: none;
     border: 1px solid #bfbfbf;
@@ -355,8 +356,9 @@ form input {
 }
 
 form textarea {
-    padding: 5px;
+    padding: 5px 15px;
     width: 100%;
+    font-family: 'Quicksand', sans-serif;
     font-size: 14px;
     height: 150px;
     outline: none;
@@ -368,6 +370,7 @@ form textarea {
 form button {
     margin-top: 10px;
     padding: 10px 20px;
+    font-family: 'Quicksand', sans-serif;
     font-size: 17px;
     color: #fff;
     border: 2px #001C30 solid;
@@ -381,6 +384,48 @@ form button:hover {
     background: transparent;
     color: #001C30
 }
+
+button i {
+    margin-right: 10px;
+}
+
+
+.btn-none {
+    display: none;
+}
+
+
+.alert {
+    padding: 15px;
+    width: 100%;
+    margin-bottom: 15px;
+    background-color: #4efc5f;
+    border-radius: 5px;
+    color: #001C30;
+}
+
+.alert-none {
+    display: none;
+}
+
+.alert p {
+    margin-top: 6px;
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: #001C30;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.closebtn:hover {
+    color: black;
+}
+
+
 
 aside {
     display: flex;

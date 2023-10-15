@@ -158,11 +158,17 @@
                         </div>
                     </div>
                     <div class="col form">
-                        <form>
-                            <input type="text" placeholder="Nama*" required>
-                            <input type="email" placeholder="Email*" required>
-                            <textarea placeholder="Pesan*" required></textarea>
-                            <button id="submit" type="submit">Kirim Pesan</button>
+                        <div class="alert alert-none">
+                            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                            <p><strong>Terimakasih! </strong>Pesan anda sudah kami terima</p>
+                        </div>
+                        <form name="mzho-contact-form">
+                            <input type="text" placeholder="Nama*" name="nama" required>
+                            <input type="email" placeholder="Email*" name="email" required>
+                            <textarea placeholder="Pesan*" name="pesan" required></textarea>
+                            <button id="submit" type="submit" class="btn-kirim">Kirim Pesan</button>
+                            <button id="submit" type="submit" class="btn-loading btn-none"><i
+                                    class='bx bx-loader-alt bx-spin'></i>Loading</button>
                         </form>
                     </div>
                 </div>
@@ -194,6 +200,35 @@
             </span>
         </div>
     </footer>
+
+    <script>
+        const scriptURL =
+            'https://script.google.com/macros/s/AKfycbxVoFVBrtEA8rNfbQBnmD06GPoWheHDBU7q93gN1DitHx3nAlIWyA5oTUDTktOklZ76/exec'
+        const form = document.forms['mzho-contact-form']
+        const btnKirim = document.querySelector('.btn-kirim');
+        const btnLoading = document.querySelector('.btn-loading');
+        const alert = document.querySelector('.alert');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            btnLoading.classList.toggle('btn-none')
+            btnKirim.classList.toggle('btn-none');
+            fetch(scriptURL, {
+                method: 'POST',
+                body: new FormData(form)
+            })
+            .then(response => {
+                    btnLoading.classList.toggle('btn-none')
+                    btnKirim.classList.toggle('btn-none');
+                    // tampilkan alert
+                    alert.classList.toggle('alert-none')
+                    // reset formnya
+                    form.reset();
+                    console.log('Success!', response)
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
 </body>
 
 </html>
