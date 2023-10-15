@@ -1,0 +1,515 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #001C30
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: #001C30
+}
+
+.navbar {
+    display: flex;
+    padding: 0 10px;
+    max-width: 1200px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between
+}
+
+.navbar input#menu-toggler {
+    display: none
+}
+
+.navbar #hamburger-btn {
+    cursor: pointer;
+    display: none
+}
+
+.navbar .all-links {
+    display: flex;
+    align-items: center
+}
+
+.navbar .all-links li {
+    position: relative;
+    list-style: none
+}
+
+.navbar .all-links li a i {
+    margin-right: 5px;
+    align-items: center
+}
+
+.navbar .logo a {
+    display: flex;
+    align-items: center;
+    margin-left: 0;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700
+}
+
+.btn {
+    padding: 7px 20px;
+    background-color: #fff;
+    color: #001C30;
+    border-radius: 50px;
+    border: 2px #fff solid;
+    transition: .4s ease
+}
+
+.btn:hover {
+    background-color: transparent;
+    border: 2px #fff solid;
+    color: #fff
+}
+
+header a,
+footer a {
+    margin-left: 40px;
+    text-decoration: none;
+    color: #fff;
+    height: 100%;
+    padding: 11px 0;
+    display: inline-block
+}
+
+header a:hover {
+    color: #ddd
+}
+
+#beranda {
+    width: 100%;
+    height: 800px;
+    background-image: url(../img/hero.png);
+    background-size: cover
+}
+
+#beranda .content {
+    display: flex;
+    width: 100%;
+    height: 90%;
+    z-index: 3;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column
+}
+
+#beranda .content h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    margin-top: -20px;
+    margin-bottom: 10px
+}
+
+#beranda .content .text {
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.3)
+}
+
+.content a {
+    color: #001C30;
+    font-size: 18px;
+    margin: 0 10px;
+    padding: 10px 30px;
+    background-color: #fff;
+    border-radius: 50px;
+    border: 2px #fff solid;
+    transition: .4s ease;
+    text-decoration: none
+}
+
+.content a:hover {
+    background-color: transparent;
+    border: 2px #fff solid;
+    color: #fff
+}
+
+section h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: #003049;
+    text-align: center;
+    padding: 20px
+}
+
+h2 span {
+    display: inline;
+    position: relative;
+    padding-bottom: 10px
+}
+
+h2 span::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    background-color: #003049;
+    bottom: 0;
+    left: 25%;
+    animation: borderAnimation 2s infinite;
+    transform-origin: center
+}
+
+@keyframes borderAnimation {
+    0% {
+        transform: scaleX(1)
+    }
+
+    50% {
+        transform: scaleX(0.1)
+    }
+
+    100% {
+        transform: scaleX(1)
+    }
+}
+
+#tentang {
+    color: #003049
+}
+
+.additional-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    width: 1000px;
+    margin: auto
+}
+
+.additional-left {
+    flex: 1;
+    padding: 20px
+}
+
+.additional-left img {
+    max-width: 100%;
+    height: auto
+}
+
+.additional-right {
+    flex: 1;
+    padding: 20px
+}
+
+.content-2 {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    padding: 20px;
+    width: 1000px;
+    margin: auto
+}
+
+.content-left {
+    flex: 1;
+    padding: 20px;
+    margin-top: -90px
+}
+
+.content-left img {
+    margin-top: 80px;
+    max-width: 100%;
+    height: auto
+}
+
+.content-right {
+    flex: 1;
+    padding: 20px
+}
+
+.content-right p i {
+    margin-right: 5px
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+
+.product {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: center
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px
+}
+
+.product h2 {
+    font-size: 20px;
+    margin: 10px 0
+}
+
+.product p {
+    font-size: 16px
+}
+
+.product a {
+    background-color: #001C30;
+    color: #fff;
+    border: 2px #001C30 solid;
+    padding: 7px 15px;
+    margin-top: 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: .4s ease
+}
+
+.product a:hover {
+    background-color: transparent;
+    color: #001C30
+}
+
+.container-testimoni {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px
+}
+
+.testimoni {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    width: 300px
+}
+
+.testimoni img {
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    justify-content: center;
+    margin-bottom: 10px
+}
+
+.testimoni p {
+    text-align: center
+}
+
+#hubungi {
+    width: 85%;
+    margin: auto
+}
+
+.row {
+    margin: 60px 0 90px;
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between
+}
+
+.row .col {
+    padding: 0 10px;
+    width: calc(100% / 2 - 50px)
+}
+
+.col p {
+    margin-bottom: 10px
+}
+
+.col p i {
+    color: #001C30;
+    margin-right: 10px
+}
+
+form input {
+    height: 45px;
+    margin-bottom: 20px;
+    padding: 5px;
+    width: 100%;
+    font-size: 14px;
+    outline: none;
+    border: 1px solid #bfbfbf;
+    border-radius: 5px
+}
+
+form textarea {
+    padding: 5px;
+    width: 100%;
+    font-size: 14px;
+    height: 150px;
+    outline: none;
+    resize: vertical;
+    border: 1px solid #bfbfbf;
+    border-radius: 5px
+}
+
+form button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 17px;
+    color: #fff;
+    border: 2px #001C30 solid;
+    cursor: pointer;
+    border-radius: 25px;
+    background: #001C30;
+    transition: .4s ease
+}
+
+form button:hover {
+    background: transparent;
+    color: #001C30
+}
+
+aside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px
+}
+
+.card {
+    background-color: #001C30;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 700px;
+    text-align: center;
+    padding: 20px;
+    margin: auto;
+    color: #fff
+}
+
+.card img {
+    width: 300px;
+    border-radius: 50%;
+    border: 5px #ddd solid;
+    margin: 0 auto 10px
+}
+
+.card h1 {
+    font-size: 1.5em;
+    margin: 0
+}
+
+.card h4 {
+    margin-top: 0
+}
+
+.card p {
+    text-align: left;
+    font-size: 1em
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: #001C30;
+    padding: 20px 0
+}
+
+footer div {
+    padding: 0 10px;
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between
+}
+
+footer span {
+    color: #fff
+}
+
+footer a {
+    padding: 0
+}
+
+@media screen and (max-width: 860px) {
+    .navbar .all-links {
+        position: fixed;
+        left: -100%;
+        width: 300px;
+        display: block;
+        height: 100vh;
+        top: 75px;
+        background: #001C30;
+        transition: left .3s ease
+    }
+
+    .navbar #menu-toggler:checked~.all-links {
+        left: 0
+    }
+
+    .navbar .all-links li {
+        font-size: 18px
+    }
+
+    .navbar #hamburger-btn {
+        display: block
+    }
+
+    #beranda .content h1 {
+        font-size: 35px
+    }
+
+    #beranda .content p {
+        font-size: 15px;
+        width: 70%;
+        margin: auto
+    }
+
+    .content-2,
+    .additional-content {
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .container {
+        flex-direction: column
+    }
+
+    .product {
+        width: 90%;
+    }
+
+    .row {
+        flex-direction: column
+    }
+
+    .row .col {
+        width: 100%
+    }
+
+    .row .col:last-child {
+        margin-top: 40px
+    }
+
+    footer a {
+        height: 0
+    }
+
+    .card {
+        width: 90%;
+    }
+}
