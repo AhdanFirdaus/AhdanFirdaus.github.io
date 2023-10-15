@@ -425,47 +425,6 @@ button i {
     color: black;
 }
 
-
-
-aside {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 50px
-}
-
-.card {
-    background-color: #001C30;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 700px;
-    text-align: center;
-    padding: 20px;
-    margin: auto;
-    color: #fff
-}
-
-.card img {
-    width: 300px;
-    border-radius: 50%;
-    border: 5px #ddd solid;
-    margin: 0 auto 10px
-}
-
-.card h1 {
-    font-size: 1.5em;
-    margin: 0
-}
-
-.card h4 {
-    margin-top: 0
-}
-
-.card p {
-    text-align: left;
-    font-size: 1em
-}
-
 footer {
     width: 100%;
     display: flex;
